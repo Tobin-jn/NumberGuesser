@@ -1,0 +1,151 @@
+body {
+  height: 928px;
+  margin: 0px;
+  width: 100%;
+}
+
+header { 
+/*  border: solid thin red;*/
+  background: #404041;
+  font-family: 'Open Sans', sans-serif;
+  height: 13.47%;
+}
+
+h1 {
+  font-size: 4.3em;
+  margin: 0px auto;
+  position: relative;
+  text-align: center;
+  top: 17px;
+  width: 100%;
+}
+
+.number { 
+  color: #ED458B;
+  font-weight: 700;
+}
+
+.guesser {
+  color: #E6E7E8;
+  font-weight: 300;
+}
+
+article {
+/*  border: solid thin purple;*/
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+.guess {
+  /*border: solid thin red;*/
+  height: 31.57%;
+  width: 534px;
+  margin: 0px auto;
+}
+
+#guess-input {
+  border: 2px thin #D0D2D3;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.1em;
+  font-weight: 300;
+  height: 50px;
+  margin: 59px 0px 51px 0px;
+  width: 528px; 
+}
+
+#guess-input::placeholder {
+  color: #D0D2D3;
+}
+
+.guess-button {
+  background-color: #929497;
+  border-radius: 27px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.1em;
+  height: 53px; 
+  margin: 0px 18px 085px 0px;
+  width: 244px;
+}
+
+.clear-button {
+  background-color: #929497;
+  border-radius: 27px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.1em;
+  height: 53px; 
+  margin: 0px 0px 85px 32px;
+  width: 244px;
+}
+
+.clear-button:hover,
+.guess-button:hover {
+  background-color: #EB008B;
+  color: #FFFFFF;
+}
+
+.choice {
+/*  border: solid thin blue;*/
+  height: 35.12%;
+  margin: 0px auto;
+  width: 360px;
+}
+
+.last-guess-number {
+  /*border: solid thin blue;*/
+  box-sizing: border-box;
+  color: #EB008B;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14.9em;
+  font-weight: 300;
+  height: 267.5px;
+  line-height: 1.03em;
+  margin: 0px;
+  padding: 10px 0px 10px 0px;
+  text-align: center;
+  width: 360px;
+}
+
+h3 {
+  box-sizing: border-box;
+  color: #404041;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.2em;
+  font-weight: 300;
+  height: 37.5px;
+  line-height: 1em;
+  margin: 0px;
+  text-align: center;
+  width: 360px;
+}
+
+.reset {
+   /*border: solid thin green;*/
+  height: 19.83%;
+  margin: 0px auto;
+  width: 530px;
+}
+
+.reset-button {
+  background-color: #929497;
+  border-radius: 27px;
+  color: #FFFFFF;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6em;
+  font-weight: 300;
+  height: 46px;
+  margin: 78px 0px 60px 0px;
+  width: 527px;
+}
+
+.reset-button:hover {
+  background-color: #EB008B;
+  color: #FFFFFF;
+}
+
+/*Disabled state of button
+Background-color: #D0D2D3;
+color: #FFFFFF;*/
