@@ -36,6 +36,39 @@ article {
   font-weight: 300;
 }
 
+.range {
+  height: 31.57%;
+  width: 534px;
+  margin: 0px auto;
+}
+
+.enter-your-values {
+  color: #404041;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+#min-range {
+  border: 2px thin #D0D2D3;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.1em;
+  font-weight: 300;
+  height: 50px;
+  margin: 59px 0px 51px 0px;
+  width: 200px; 
+}
+
+#max-range {
+  border: 2px thin #D0D2D3;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.1em;
+  font-weight: 300;
+  height: 50px;
+  margin: 59px 0px 51px 0px;
+  width: 200px; 
+}
+
 .guess {
   /*border: solid thin red;*/
   height: 31.57%;
@@ -65,7 +98,7 @@ article {
   font-family: 'Open Sans', sans-serif;
   font-size: 2.1em;
   height: 53px; 
-  margin: 0px 18px 085px 0px;
+  margin-bottom: 0px 18px 085px 0px;
   width: 244px;
 }
 
@@ -129,6 +162,9 @@ h3 {
   width: 530px;
 }
 
+.reset-button-disbaled {
+
+}
 .reset-button {
   background-color: #929497;
   border-radius: 27px;

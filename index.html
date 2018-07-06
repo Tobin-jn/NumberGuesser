@@ -11,6 +11,12 @@
       <h1><span class="number">Number </span><span class="guesser">Guesser</span></h1>
     </header>
     <article>
+      <section class="range">
+        <p class="enter-your-values">Enter your Minimum and Maximum Guess</p>
+         <input id="min-range" type="number" name="your-guess" placeholder=" Minimum">
+          <input id="max-range" type="number" name="your-guess" placeholder=" Maximum">
+          <button id="range-enter">Submit</button>
+      </section>
       <section class="guess">
         <input id="guess-input" type="text" name="your-guess" placeholder="  Please enter a number">
         <div class="guess-clear-buttons">
@@ -20,7 +26,7 @@
       </section>
       <section class="choice">
         <h3 class="text-guess">Guess a Number!</h3>
-        <div class="last-guess-number">...</div>
+        <div class="last-guess-number"></div>
         <h3 class="response"></h3>
       </section>
       <section class="reset">
@@ -29,5 +35,4 @@
     </article>
     <script type="text/javascript" src="script.js"></script>
   </body>
-  
 </html>
