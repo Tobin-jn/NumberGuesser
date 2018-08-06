@@ -1,0 +1,101 @@
+Phase 1
+
+-Functionality of buttons
+-States of Buttons
+
+
+Generate a random number 1-100
+
+      Math.floor(Math.random() * 100 + 1)
+      
+         function getRandomIntInclusive(min, max) {
+          min = Math.ceil(min);
+          max = Math.floor(max);
+          return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
+        }
+          getRandomIntInclusive(1, 100)
+
+Display users guess
+
+check if input is between 0-100
+  if not, what happens- warning or alert
+
+          function checkNumber(a) {
+              var randomNumber = Math.floor(Math.random() * 100 + 1);
+            if (a === randomNumber){
+              console.log("Boom");
+              } else if (a > randomNumber){
+              console.log("Too Big!");
+              } else {
+              console.log("Too Small");
+              }
+          }
+
+is input from user <, >, or === to random number
+ if less than say... That is too low
+ if more than say... That is too high
+ if correct say.... BOOM!
+
+
+Phase 2
+
+Input only accepts numbers between 0-100
+If NaN then error message
+If outside range, then error message
+Clear button disabled if nothing to clear
+Reset button disabled if nothing to reset
+
+
+Phase 3
+Add inputs for the user to specify Minimum and Maximum (two additional variables) (input field needs to be adjusted)
+When the user wins a round- increase the max by 10 and decrease the min by 10
+    -There should be appropriate UI so the user understands that is happening
+
+Phase 4- Choose your own adventure
+
+Have liberty with UI (make it your own)
+  Make it two player
+  Incorporating a scoring system based on how quickly the users guesses the correct Number.
+  Turn it into a game to teach basic arithmetic to kids
+
+
+
+
+Syllabus/Rubric TO DO
+
+  HTML
+  Accessbility
+  -precise semantic tages and employ basic ARIA roles sttributes for added clarity, 
+  -image alt attributes
+  -title attributes for anchor tags
+  -Accessibility practices, especially in forms
+
+  Style
+  -solid formatting  and naming conventions
+
+  CSS
+  Structure
+  -organize CSS rules according to similar categories (typography, layout, componenets), logically organize the rest based on flow. organize properties within rules alphabetically
+  -reduce, reuse, and share style across elements
+
+  Implementation
+  -articulate the box model
+  -articulate differences in positioning
+  -cross-browser, responsive
+
+  Javascript
+  -articulate primitive data types, and object types
+  -diagnose data-type mismatching and work to solve the problem
+  -understand the data types through a variety of functions and their affects and results on each line
+  .....
+
+  Git & Github
+  .....
+
+  Testing
+  .....
+
+  Design- Comp Recreation
+  -pixel perfect
+
+
