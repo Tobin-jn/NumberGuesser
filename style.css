@@ -38,6 +38,8 @@ article {
 .flex-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .user-input {
@@ -57,6 +59,7 @@ article {
 .guess-clear-btns {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .guess-btn {
@@ -71,8 +74,10 @@ article {
   width: 244px;
 }
 
-.counter-box {
+.counter {
   border: solid black 1px;
+  text-align: center;
+  font-size: 2em;
 }
 
 .clear-btn {
