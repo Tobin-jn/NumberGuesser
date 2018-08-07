@@ -1,3 +1,5 @@
+//make random number//
+
 var guessBtn = document.querySelector('.guess-btn');
 var clearBtn = document.querySelector('.clear-btn');
 var resetBtn = document.querySelector('.reset-btn');
@@ -30,8 +32,15 @@ function clearInput() {
 }
 
 function checkGuess() {
-  console.log(parseInt(min.value))
-  console.log(parseInt(max.value))
+  var userMin = parseInt(min.value)
+  var userMax = parseInt(max.value)
+  var guess = parseInt(userInput.value);
+  if (guess < userMin || guess > userMax) {
+  document.querySelector('.correct').innerHTML = "Outside the Min/Max!! Guess Again!";
+} else if ( // less than the number... say)
+  else if (//more than the number ... say)//
+    else (say Boom!)
+    
 }
 
 
