@@ -8,24 +8,36 @@
   </head>
   <body>
     <header>  
-      <h1><span class="number">Number </span><span class="guesser">Guesser</span></h1>
+      <h1>Number<span class="guesser">Guesser</span></h1>
     </header>
+
+
     <article>
-      <section class="guess">
-        <input id="guess-input" type="text" name="your-guess" placeholder="  Please enter a number">
-        <div class="guess-clear-buttons">
-          <button class="guess-button">Guess</button>
-          <button class="clear-button">Clear</button>
-        </div>
+      <section class="flex-wrapper">
+
+        <form>
+          <input class="user-input" type="text" name="user-guess" placeholder="Please enter a number">
+        </form>
+
+          <div class="guess-clear-btns" aria-label="Buttons to guess and clear input">
+            <button class="guess-btn" disabled>Guess</button>
+            <div class="counter-box">
+              <h5 class="counter">0</h5>
+              <p>Number of guesses</p>
+            </div>
+            <button class="clear-btn" disabled>Clear</button>
+          </div>
+        
+        <section class="choice">
+          <h3 class="text-guess">Guess a Number!</h3>
+          <div class="last-guess">...</div>
+          <h3 class="response"></h3>
+        </section>
+
+        <button class="reset-btn" disabled> Reset</button>
+
       </section>
-      <section class="choice">
-        <h3 class="text-guess">Guess a Number!</h3>
-        <div class="last-guess-number">...</div>
-        <h3 class="response"></h3>
-      </section>
-      <section class="reset">
-        <button class="reset-button reset-button-disabled"> Reset</button>
-      </section>
+
     </article>
     <script type="text/javascript" src="script.js"></script>
   </body>
