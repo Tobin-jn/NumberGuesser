@@ -1,14 +1,16 @@
 body {
-  height: 928px;
+/*  height: 928px;*/
+  box-sizing: border-box;
   margin: 0px;
   width: 100%;
 }
 
+/*=======Header========*/
+
 header { 
-/*  border: solid thin red;*/
   background: #404041;
   font-family: 'Open Sans', sans-serif;
-  height: 13.47%;
+  height: 15%;
 }
 
 h1 {
@@ -16,11 +18,7 @@ h1 {
   margin: 0px auto;
   position: relative;
   text-align: center;
-  top: 17px;
   width: 100%;
-}
-
-.number { 
   color: #ED458B;
   font-weight: 700;
 }
@@ -30,20 +28,21 @@ h1 {
   font-weight: 300;
 }
 
+/*==========Body-Guess=========*/
+
 article {
-/*  border: solid thin purple;*/
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
 
-.guess {
-  /*border: solid thin red;*/
-  height: 31.57%;
-  width: 534px;
-  margin: 0px auto;
+.flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#guess-input {
+.user-input {
   border: 2px thin #D0D2D3;
   font-family: 'Open Sans', sans-serif;
   font-size: 2.1em;
@@ -53,14 +52,20 @@ article {
   width: 528px; 
 }
 
-#guess-input::placeholder {
+.user-input::placeholder {
   color: #D0D2D3;
 }
 
-.guess-button {
+.guess-clear-btns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.guess-btn {
   background-color: #929497;
   border-radius: 27px;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   color: #FFFFFF;
   font-family: 'Open Sans', sans-serif;
   font-size: 2.1em;
@@ -69,10 +74,16 @@ article {
   width: 244px;
 }
 
-.clear-button {
+.counter {
+  border: solid black 1px;
+  text-align: center;
+  font-size: 2em;
+}
+
+.clear-btn {
   background-color: #929497;
   border-radius: 27px;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   color: #FFFFFF;
   font-family: 'Open Sans', sans-serif;
   font-size: 2.1em;
@@ -81,21 +92,19 @@ article {
   width: 244px;
 }
 
-.clear-button:hover,
-.guess-button:hover {
+.clear-btn:hover,
+.guess-btn:hover {
   background-color: #EB008B;
   color: #FFFFFF;
 }
 
 .choice {
-/*  border: solid thin blue;*/
-  height: 35.12%;
-  margin: 0px auto;
+display: flex;
+flex-direction: column;
   width: 360px;
 }
 
-.last-guess-number {
-  /*border: solid thin blue;*/
+.last-guess {
   box-sizing: border-box;
   color: #EB008B;
   font-family: 'Open Sans', sans-serif;
@@ -123,13 +132,12 @@ h3 {
 }
 
 .reset {
-   /*border: solid thin green;*/
   height: 19.83%;
   margin: 0px auto;
   width: 530px;
 }
 
-.reset-button {
+.reset-btn {
   background-color: #929497;
   border-radius: 27px;
   color: #FFFFFF;
@@ -141,11 +149,8 @@ h3 {
   width: 527px;
 }
 
-.reset-button:hover {
+.reset-btn:hover {
   background-color: #EB008B;
   color: #FFFFFF;
 }
 
-/*Disabled state of button
-Background-color: #D0D2D3;
-color: #FFFFFF;*/
