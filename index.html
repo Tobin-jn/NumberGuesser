@@ -16,8 +16,19 @@
       <section class="flex-wrapper">
 
         <form>
-          <input class="user-input" type="text" name="user-guess" placeholder="Please enter a number">
+          <input class="user-input" type="number" name="user-guess" placeholder="Please enter a number">
         </form>
+        
+          <div class="min-max-box">
+            <div class="min-box">
+              <input class="min-input" type="number" name="minimum guess">
+              <p>Minimum Guess</p>
+            </div>
+            <div class="max-box">
+              <input class="max-input" type="number" name="maximum guess">
+              <p>Maximum Guess</p>
+            </div>
+          </div>
 
           <div class="guess-clear-btns" aria-label="Buttons to guess and clear input">
             <button class="guess-btn" >Guess</button>
