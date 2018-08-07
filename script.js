@@ -1,23 +1,34 @@
-//make random number//
-
+//=====Global Variables=====//
 var guessBtn = document.querySelector('.guess-btn');
 var clearBtn = document.querySelector('.clear-btn');
 var resetBtn = document.querySelector('.reset-btn');
+var setBtn = document.querySelector('.setMinMax');
 var userInput = document.querySelector('.user-input');
-var min = document.querySelector('.min-input');
-var max = document.querySelector('.max-input');
+var minInput = document.querySelector('.min-input');
+var maxInput = document.querySelector('.max-input');
 var counter = document.querySelector('.counter');
 var count = 0;
+var randomNumber = 0;
+
+
+//=====Event Listeners=====//
 
 guessBtn.addEventListener('click', makeGuess);
 clearBtn.addEventListener('click', clearInput);
+setBtn.addEventListener('click', getRandomInteger);
+userInput.addEventListener('keyup', enableBtn);
+maxInput.addEventListener('keyup', enableMinBtn);
+resetBtn.addEventListener('click', resetAll);
+
+
+//=====Functions=====//
 
 function makeGuess(e) {
   e.preventDefault();
   var lastGuess = document.querySelector(".last-guess");
   var guess = parseInt(userInput.value);
   document.querySelector('.text-your-guess').innerHTML = "Your guess was";
-  lastGuess.innerText = guess; 
+  lastGuess.innerText = guess;
   countIncrease();
   checkGuess();
 }
@@ -32,20 +43,57 @@ function clearInput() {
 }
 
 function checkGuess() {
-  var userMin = parseInt(min.value)
-  var userMax = parseInt(max.value)
+  var userMin = parseInt(minInput.value);
+  var userMax = parseInt(maxInput.value);
   var guess = parseInt(userInput.value);
-  if (guess < userMin || guess > userMax) {
-  document.querySelector('.correct').innerHTML = "Outside the Min/Max!! Guess Again!";
-} else if ( // less than the number... say)
-  else if (//more than the number ... say)//
-    else (say Boom!)
-    
+  if (guess <= userMin || guess >= userMax) {
+  document.querySelector('.correct').innerHTML = "Outside the Min/Max!! Guess Again!"
+  } else if (guess < randomNumber) {
+    document.querySelector('.correct').innerHTML = "Too Low, Guess Again!"
+  } else if (guess > randomNumber) {
+    document.querySelector('.correct').innerHTML = "Too High, Guess Again!"
+  } else {document.querySelector('.correct').innerHTML = "You did it!!"} 
 }
 
 
+function getRandomInteger() {
+  var userMin = parseInt(minInput.value)
+  var userMax = parseInt(maxInput.value)
+  randomNumber = Math.floor(Math.random() * (userMax - userMin + 1)) + userMin;
+  console.log('Random Number is ' + randomNumber);
+}
 
+function enableBtn() {
+  if (userInput.value !== '') {
+    guessBtn.disabled = false;
+    clearBtn.disabled = false;
+    guessBtn.classList.add('guess-btn-hover');
+    clearBtn.classList.add('clear-btn-hover');
+    resetBtn.classList.add('reset-btn-hover');
+  }
+}
 
+function enableMinBtn() {
+  if (minInput.value !== '' && maxInput.value !== '') {
+    setBtn.disabled = false;
+  }
+}
+
+function resetAll() {
+  userInput.value = '';
+  minInput.value = '';
+  maxInput.value = '';
+  count = 0;
+  counter.innerText = count;
+  guessBtn.disabled = true;
+  clearBtn.disabled = true;
+  setBtn.disabled = true;
+  document.querySelector('.last-guess').innerHTML = '--';
+  document.querySelector('.correct').innerHTML = '';
+  guessBtn.classList.remove('guess-btn-hover');
+  clearBtn.classList.remove('clear-btn-hover');
+  resetBtn.classList.remove('reset-btn-hover');
+}
 
 
 
