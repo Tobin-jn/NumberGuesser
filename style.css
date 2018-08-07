@@ -99,8 +99,8 @@ h1 {
      margin-left: 40px; 
 }
 
-.clear-btn:hover,
-.guess-btn:hover {
+.clear-btn-hover:hover,
+.guess-btn-hover:hover {
   background-color: #EB008B;
   color: #FFFFFF;
 }
@@ -157,7 +157,7 @@ h3 {
     width: 100%;
 }
 
-.reset-btn:hover {
+.reset-btn-hover:hover {
   background-color: #EB008B;
   color: #FFFFFF;
 }
